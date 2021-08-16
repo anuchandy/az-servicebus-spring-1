@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="DEBUG">
+  <Appenders>
+    <Console name="console" target="SYSTEM_OUT">
+      <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+    </Console>
+  </Appenders>
+
+  <Loggers>
+    <Logger name="com.azure" level="debug" additivity="false">
+      <appender-ref ref="console" />
+    </Logger>
+    <Logger name="com.example.demo" level="debug" additivity="false">
+      <appender-ref ref="console" />
+    </Logger>
+    <Root level="error" additivity="false">
+      <appender-ref ref="console" />
+    </Root>
+  </Loggers>
+</Configuration>
